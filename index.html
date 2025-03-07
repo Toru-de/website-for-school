@@ -1,64 +1,98 @@
-<!-- index.html -->
+<!-- index.html - Обновленная структура -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
-    <title>Информатика в школе</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Информатика в школе | Изучаем технологии</title>
+    <meta name="description" content="Образовательный ресурс по информатике для школьников. Изучаем устройство компьютеров, историю информатики и актуальные технологии.">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
-        <nav>
+        <div class="particles-container" id="particles-js"></div>
+        <nav id="mainNav">
             <ul class="nav-list">
-                <li><a href="#pc">Устройство ПК</a></li>
-                <li><a href="#history">История информатики</a></li>
-                <li><a href="#resources">Доп. материалы</a></li>
+                <li><a href="#pc" class="nav-link">Устройство ПК</a></li>
+                <li><a href="#history" class="nav-link">История информатики</a></li>
+                <li><a href="#resources" class="nav-link">Доп. материалы</a></li>
             </ul>
         </nav>
         <div class="header-content">
             <h1>Информатика в школе</h1>
             <p>Погрузитесь в удивительный мир технологий и вычислительных наук!</p>
-            <button id="learnBtn">Узнать больше</button>
+            <button id="learnBtn" class="btn">Узнать больше</button>
         </div>
-        <div class="overlay"></div>
     </header>
 
     <section id="hero">
         <div class="hero-container">
-            <!-- Вместо картинки стилизованный блок -->
-            <div class="placeholder-block fade-in"></div>
-            <p>Изучая информатику, вы узнаете, как устроены компьютеры и сети, и как инновации в сфере IT влияют на нашу повседневную жизнь.</p>
+            <div class="visual-block fade-in" id="heroVisual"></div>
+            <p>Изучая информатику, вы узнаете, как устроены компьютеры и сети, и как инновации в сфере IT влияют на нашу повседневную жизнь. Современный мир не существует без цифровых технологий.</p>
         </div>
     </section>
 
-    <section id="pc" class="content-section">
-        <h2>Структура персонального компьютера</h2>
-        <div class="placeholder-block slide-in"></div>
-        <p>Компьютер – это совокупность аппаратного и программного обеспечения. Процессор обрабатывает данные, память хранит их, а все компоненты связаны материнской платой.</p>
+    <section id="pc">
+        <div class="section-container">
+            <div class="content-section">
+                <h2 class="section-title">Структура персонального компьютера</h2>
+                <p>Компьютер – это совокупность аппаратного и программного обеспечения. Процессор обрабатывает данные, память хранит их, а все компоненты связаны материнской платой.</p>
+                <p>Основными компонентами компьютера являются:</p>
+                <ul>
+                    <li>Центральный процессор (CPU) - мозг компьютера</li>
+                    <li>Оперативная память (RAM) - временное хранилище данных</li>
+                    <li>Постоянная память (ROM) - хранилище базовых инструкций</li>
+                    <li>Жесткий диск (HDD/SSD) - долговременное хранилище</li>
+                    <li>Материнская плата - связывает все компоненты воедино</li>
+                </ul>
+            </div>
+            <div class="visual-block pc-visual slide-right" id="pcVisual"></div>
+        </div>
     </section>
 
-    <section id="history" class="content-section">
-        <h2>История информатики</h2>
-        <div class="placeholder-block slide-in"></div>
-        <p>От первых ламповых ЭВМ до современных квантовых компьютеров – информатика прошла огромный путь, став фундаментом современного технологического прогресса.</p>
+    <section id="history">
+        <div class="section-container">
+            <div class="visual-block history-visual slide-left" id="historyVisual"></div>
+            <div class="content-section">
+                <h2 class="section-title">История информатики</h2>
+                <p>От первых ламповых ЭВМ до современных квантовых компьютеров – информатика прошла огромный путь, став фундаментом современного технологического прогресса.</p>
+                <p>Ключевые моменты в истории информатики:</p>
+                <ul>
+                    <li>1940-е: Создание первых ЭВМ (ENIAC, МЭСМ)</li>
+                    <li>1950-60-е: Появление языков программирования</li>
+                    <li>1970-е: Разработка микропроцессоров и первых ПК</li>
+                    <li>1980-е: Распространение персональных компьютеров</li>
+                    <li>1990-е: Развитие интернета и WWW</li>
+                    <li>2000-е: Мобильные технологии и облачные вычисления</li>
+                    <li>2010-е: Искусственный интеллект и машинное обучение</li>
+                    <li>2020-е: Квантовые вычисления и расширенная реальность</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <section id="resources" class="content-section">
-        <h2>Дополнительные ресурсы</h2>
-        <div class="placeholder-block slide-in"></div>
-        <p>Для изучения информатики доступны множество бесплатных ресурсов. Они помогут получить теоретические знания и понять современные тренды технологий.</p>
-        <ul>
-            <li><a href="https://ru.wikipedia.org/wiki/Информатика" target="_blank">Статья в Википедии</a></li>
-            <li><a href="https://habr.com/ru/" target="_blank">Хабр — статьи о технологиях</a></li>
-            <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy (англ.)</a></li>
-        </ul>
+    <section id="resources">
+        <div class="section-container">
+            <div class="content-section">
+                <h2 class="section-title">Дополнительные ресурсы</h2>
+                <p>Для изучения информатики доступны множество бесплатных ресурсов. Они помогут получить теоретические знания и понять современные тренды технологий.</p>
+                <ul>
+                    <li><a href="https://ru.wikipedia.org/wiki/Информатика" target="_blank">Статья в Википедии об информатике</a></li>
+                    <li><a href="https://habr.com/ru/" target="_blank">Хабр — статьи о технологиях</a></li>
+                    <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy (англ.)</a></li>
+                    <li><a href="https://stepik.org/catalog/58" target="_blank">Курсы по информатике на платформе Stepik</a></li>
+                    <li><a href="https://www.codecademy.com/" target="_blank">Codecademy - обучение программированию (англ.)</a></li>
+                </ul>
+            </div>
+            <div class="visual-block resources-visual slide-right" id="resourcesVisual"></div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2024 Информатика в школе</p>
+        <div class="footer-particles" id="footer-particles"></div>
+        <p>© 2024 Информатика в школе | Образовательный проект</p>
     </footer>
 
     <script src="script.js"></script>
